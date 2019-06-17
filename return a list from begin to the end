@@ -1,0 +1,10 @@
+  defmodule Mylist do
+  def span([from,from]) do
+    [from]
+  end
+  def span([from | to]) do
+    [from | span([from + 1 | to)]
+  end
+end
+
+Mylist.span [3,9]
