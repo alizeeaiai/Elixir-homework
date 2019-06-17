@@ -1,0 +1,14 @@
+defmodule ReturnMax do
+  def max([head | tail]) do
+    largest(tail,head)
+  end
+  def largest([head | tail],largest) when head >= largest do
+    largest(tail,head)
+  end
+  def largest([head | tail],largest) when head < largest do
+    largest(tail,largest)
+  end
+  def largest(a) do
+    a 
+  end
+end
