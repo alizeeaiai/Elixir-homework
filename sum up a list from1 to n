@@ -1,0 +1,13 @@
+defmodule Recursion do
+  def recursion([1,1]) do
+    2
+  end
+  def recursion([tail | tail]) do
+    tail
+  end
+  def recursion([head | tail]) do
+    head ++ recursion([head + 1 | tail])
+  end
+end
+
+ IO.input Recursion.recursion [1,4]
